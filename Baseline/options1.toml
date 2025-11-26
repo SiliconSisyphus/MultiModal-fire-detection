@@ -1,0 +1,33 @@
+title = "TOML Example"
+
+[general]
+usecudnn = true
+usecudnnbenchmark = true
+gpuid = 0
+savemodel = true
+modelsavepath = "NewModel.pt"
+
+[input]
+batchsize = 16
+numworkers = 4
+shuffle = true
+
+[training]
+epoch = 10
+statsfrequency = 100
+val_interval = 5  
+
+dataset = "/root/autodl-tmp/2.实验数据"
+#dataset = "/home/whj/zxm/new"
+learningrate = 0.003
+momentum = 0.9
+weightdecay = 0.0001
+
+[validation]
+dataset = "/root/autodl-tmp/2.实验数据"
+saveaccuracy = true
+accuracyfilelocation = "accuracymodel1.txt"
+
+
+[testing]
+resultfilelocation = "testingmodel1.txt"
